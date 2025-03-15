@@ -1,6 +1,9 @@
 <?= $this->extend('master') ?>
 
 <?= $this->section('content') ?>
+<!--<div class="container-md pt-3 text-danger">-->
+<!--    <h1>Estamos na aula 39: <a href="https://www.youtube.com/watch?v=CQUxS0qvB1s&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=39">Link</a></h1>-->
+<!--</div>-->
 <!-- ======= Hero Slider Section ======= -->
 <section id="hero-slider" class="hero-slider">
     <div class="container-md" data-aos="fade-in">

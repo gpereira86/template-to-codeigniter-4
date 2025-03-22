@@ -5,10 +5,15 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class BannerHome extends BaseController
+class HomeFetch extends BaseController
 {
-    public function index()
+    public function banner()
     {
         return view('_partials/_bannerHome');
+    }
+
+    public function trending()
+    {
+        return view('_partials/_trending');
     }
 }

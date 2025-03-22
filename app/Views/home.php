@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 44: <a href="https://www.youtube.com/watch?v=0iRwS8LbgTw&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=44">Link</a></h1>-->
+<!--    <h1>Estamos na aula 46: <a href="https://www.youtube.com/watch?v=2c4XpOFJM2Y&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=46">Link</a></h1>-->
 <!--</div>-->
 <!-- ======= Hero Slider Section ======= -->
 <section id="hero-slider" class="hero-slider _bannerHome">

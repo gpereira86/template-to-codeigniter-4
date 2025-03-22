@@ -439,8 +439,11 @@
 
 
 <?= $this->section('js') ?>
+
     <script type="module">
+
         import {swipe} from './assets/js/swipeBanner.js';
+
         var bannerHome = document.querySelector('._bannerHome')
 
         fetch('/banner/home',{
@@ -449,5 +452,7 @@
             bannerHome.innerHTML = html;
             swipe(".sliderFeaturedPosts");
         }). catch(error => console.log(error))
+
     </script>
+
 <?= $this->endSection() ?>

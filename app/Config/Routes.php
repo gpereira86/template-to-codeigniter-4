@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index', ['as' => 'home']);
 $routes->get('/search', 'Search::index', ['as' => 'search']);
 
 // Chamadas views fetch
@@ -22,4 +22,4 @@ $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
 $routes->get('/category/(:alpha)', 'Category::index/$1', ['as' => 'category.culture']);
 
 //Upload de arquivos
-$routes->post('/upload', 'Upload::index', ['as' => 'upload']);
+$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

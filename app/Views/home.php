@@ -19,6 +19,17 @@
         <div class="d-flex justify-content-md-center align-items-center vh-100">
             <div class="bg bg-light p-2 border border-secondary rounded">
                 <h2>Upload de Arquivo</h2>
+
+                <span class="text-danger">
+                    <?php if (session()->has('errors')) : ?>
+                        <?php echo session()->get('errors')['userfile']; ?>
+                    <?php endif; ?>
+                </span>
+                <span class="text-success">
+                    <?php if (session()->has('uploaded')) : ?>
+                        <?php echo session()->get('uploaded'); ?>
+                    <?php endif; ?>
+                </span>
                 <form action="<?php echo url_to('upload')?>" method="post" enctype="multipart/form-data">
                     <input type="file" name="userfile" class="form-control-file">
                     <button type="submit">Upload</button>

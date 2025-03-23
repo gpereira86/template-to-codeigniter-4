@@ -13,7 +13,13 @@ class Recent extends BaseController
         helper('text');
         $post = new Post();
         $recent = $post->select(
-            'posts.id,posts.title,posts.image,posts.created_at,posts.description,categories.name AS categoryName, users.firstName AS userFirstName, users.lastName AS userLastName'
+            'posts.id,posts.title,
+            posts.image,
+            posts.created_at,
+            posts.description,
+            categories.name AS categoryName,
+            users.firstName AS userFirstName,
+            users.lastName AS userLastName'
         )->join(
             'users',
             'users.id = posts.user_id'

@@ -20,3 +20,6 @@ $routes->get('/banner/home', 'BannerHome::index', ['as' => 'banner']);
 $routes->get('/trendings', 'Trending::index', ['as' => 'trending']);
 $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
 $routes->get('/category/(:alpha)', 'Category::index/$1', ['as' => 'category.culture']);
+
+//Upload de arquivos
+$routes->post('/upload', 'Upload::index', ['as' => 'upload']);

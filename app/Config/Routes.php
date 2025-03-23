@@ -22,4 +22,4 @@ $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
 $routes->get('/category/(:alpha)', 'Category::index/$1', ['as' => 'category.culture']);
 
 //Upload de arquivos
-$routes->post('/upload', 'Upload::store', ['as' => 'upload']);
+//$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

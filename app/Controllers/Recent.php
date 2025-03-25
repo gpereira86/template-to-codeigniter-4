@@ -11,6 +11,7 @@ class Recent extends BaseController
     public function index()
     {
         helper('text');
+
         $post = new Post();
         $recent = $post->select(
             'posts.id,posts.title,

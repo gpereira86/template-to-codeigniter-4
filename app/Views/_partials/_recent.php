@@ -2,6 +2,7 @@
     <div class="row g-5">
         <div class="col-lg-4">
 
+
             <?php $post = $recent[0]; ?>
 
             <div class="post-entry-1 lg">

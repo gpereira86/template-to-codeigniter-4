@@ -32,7 +32,7 @@ class Cache extends BaseConfig
      * unreachable. Often, 'file' is used here since the filesystem is
      * always available, though that's not always practical for the app.
      */
-    public string $backupHandler = 'dummy';
+    public string $backupHandler = 'file';
 
     /**
      * --------------------------------------------------------------------------
@@ -132,8 +132,8 @@ class Cache extends BaseConfig
      * @var array<string, class-string<CacheInterface>>
      */
     public array $validHandlers = [
-        'dummy'     => DummyHandler::class,
         'file'      => FileHandler::class,
+        'dummy'     => DummyHandler::class,
         'memcached' => MemcachedHandler::class,
         'predis'    => PredisHandler::class,
         'redis'     => RedisHandler::class,

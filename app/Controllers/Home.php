@@ -11,18 +11,14 @@ class Home extends BaseController
     public function index(): string
     {
 
-        if (! $posts = cache('posts')) {
-            var_dump('create cashe');
-            $posts = (new Post())->findAll(10);
+//        if (! $posts = cache('posts')) {
+//            var_dump('create cashe');
+//            $posts = (new Post())->findAll(10);
+//
+//            cache()->save('posts', $posts, 60);
+//        }
 
-            cache()->save('posts', $posts, 60);
-        }
-
-        echo "<pre>";
-        var_dump($posts);
-        echo "</pre>";
-        die();
-
+//        $this->cachePage(10); // Cache para página html
         return view('home', ['title' => 'Home']);
     }
 }

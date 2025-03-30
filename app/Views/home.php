@@ -8,7 +8,8 @@
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 51: <a href="https://www.youtube.com/watch?v=I5tb3dp2-tY&list=PLyugqHiq-SKegiaCBJ4XaFp-yr87oFKts&index=51">Link</a></h1>-->
+<!--    <h1>Estamos na aula 16 do Criando um site:
+            <a href="https://www.youtube.com/watch?v=QnqBwzh7Dfg&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=15">Link</a></h1>-->
 <!--</div>-->
 <!-- ======= Hero Slider Section ======= -->
 <section id="hero-slider" class="hero-slider _bannerHome">

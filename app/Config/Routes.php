@@ -19,7 +19,8 @@ $routes->get('/search', 'Search::index', ['as' => 'search']);
 $routes->get('/banner/home', 'BannerHome::index', ['as' => 'banner']);
 $routes->get('/trendings', 'Trending::index', ['as' => 'trending']);
 $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
-$routes->get('/category/(:alpha)', 'Category::index/$1', ['as' => 'category.culture']);
+$routes->get('/category/partials/(:alpha)', 'CategoryPartials::index/$1', ['as' => 'categoryPartials']);
+$routes->get('/category/(:any)', 'Category::index/$1', ['as' => 'category']);
 
 //Upload de arquivos
 //$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

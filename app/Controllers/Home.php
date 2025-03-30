@@ -2,9 +2,8 @@
 
 namespace App\Controllers;
 
-
-
 use App\Models\Post;
+use App\Models\Category;
 
 class Home extends BaseController
 {
@@ -19,6 +18,9 @@ class Home extends BaseController
 //        }
 
 //        $this->cachePage(10); // Cache para página html
+
+
+
         return view('home', ['title' => 'Home']);
     }
 }

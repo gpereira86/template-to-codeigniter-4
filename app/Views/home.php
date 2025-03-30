@@ -36,7 +36,7 @@
 <section class="category-section _category_culture">
 
     <!-- Carregamento com webpack e include-fragment-element -->
-    <include-fragment src="/category/culture">
+    <include-fragment src="/category/partials/culture">
         <?php echo $this->include('_placeholders/_category'); ?>
     </include-fragment>
     <!-- Fim carregamento com webpack e include-fragment-element-->
@@ -47,7 +47,7 @@
 <section class="category-section _category_business">
 
     <!-- Carregamento com webpack e include-fragment-element -->
-    <include-fragment src="/category/business">
+    <include-fragment src="/category/partials/business">
         <?php echo $this->include('_placeholders/_category'); ?>
     </include-fragment>
     <!-- Fim carregamento com webpack e include-fragment-element-->
@@ -58,7 +58,7 @@
 <section class="category-section _category_lifestyle">
 
     <!-- Carregamento com webpack e include-fragment-element -->
-    <include-fragment src="/category/lifestyle">
+    <include-fragment src="/category/partials/lifestyle">
         <?php echo $this->include('_placeholders/_category'); ?>
     </include-fragment>
     <!-- Fim carregamento com webpack e include-fragment-element-->

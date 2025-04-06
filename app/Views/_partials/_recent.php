@@ -15,7 +15,8 @@
                     </span>
                     <span class="mx-1">&bullet;</span>
                     <span>
-                        <?php echo date('d-m-Y H:m:s', strtotime($post->created_at)); ?>
+                        <?php $time = \CodeIgniter\I18n\Time::parse($post->created_at , 'America/Chicago');
+                        echo $time->toLocalizedString("MMM d, yy"); ?>
                     </span>
                 </div>
 
@@ -53,7 +54,10 @@
                                     <?php echo $post->categoryName; ?>
                                 </span>
                                 <span class="mx-1">&bullet;</span>
-                                <span><?php echo date('d-m-Y H:m:s', strtotime($post->created_at)); ?></span>
+                                <span>
+                                    <?php $time = \CodeIgniter\I18n\Time::parse($post->created_at , 'America/Chicago');
+                                    echo $time->toLocalizedString("MMM d, yy"); ?>
+                                </span>
                             </div>
                             <h2><a href="single-post.html"><?php echo $post->title; ?></a></h2>
                         </div>
@@ -75,7 +79,10 @@
                                     <?php echo $post->categoryName; ?>
                                 </span>
                                 <span class="mx-1">&bullet;</span>
-                                <span><?php echo date('d-m-Y H:m:s', strtotime($post->created_at)); ?></span>
+                                <span>
+                                    <?php $time = \CodeIgniter\I18n\Time::parse($post->created_at , 'America/Chicago');
+                                    echo $time->toLocalizedString("MMM d, yy"); ?>
+                                </span>
                             </div>
                             <h2><a href="single-post.html"><?php echo $post->title; ?></a></h2>
                         </div>

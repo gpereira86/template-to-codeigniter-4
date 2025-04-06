@@ -15,6 +15,7 @@ class User extends Seeder
             $data = [
                 'firstname' => $faker->firstName,
                 'lastname' => $faker->lastName,
+                'image' => 'https://randomuser.me/api/portraits/'.$faker->randomElement(['men', 'women']).'/'.rand(1,90).'.jpg',
                 'email' => $faker->email,
                 'password' => password_hash('123', PASSWORD_DEFAULT),
             ];

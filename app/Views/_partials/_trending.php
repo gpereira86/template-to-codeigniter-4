@@ -1,5 +1,6 @@
 <h3>Trending</h3>
 <ul class="trending-post">
+
     <?php foreach ($posts as $index => $post) : ?>
 
     <li>

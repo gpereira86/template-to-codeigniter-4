@@ -8,10 +8,11 @@
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 19 do Criando um site:
+<!--    <h1>Estamos na aula 19 do Criando um site com codeigniter 4:
             <a href="https://www.youtube.com/watch?v=HO6-iU_V2Ds&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=18">Link</a>
         </h1>-->
 <!--</div>-->
+
 <!-- ======= Hero Slider Section ======= -->
 <section id="hero-slider" class="hero-slider _bannerHome">
 

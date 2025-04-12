@@ -17,9 +17,10 @@ $routes->get('/search', 'Search::index', ['as' => 'search']);
 
 // Alternativa 2 -> Criar controllers separados por fetch:
 $routes->get('/banner/home', 'BannerHome::index', ['as' => 'banner']);
+$routes->get('/category/sidebar/partials/(:alpha)', 'CategorySidebarPartials::index/$1', ['as' => 'category_sidebar_partials']);
 $routes->get('/trendings', 'Trending::index', ['as' => 'trending']);
 $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
-$routes->get('/category/partials/(:alpha)', 'CategoryPartials::index/$1', ['as' => 'categoryPartials']);
+$routes->get('/category/partials/(:alpha)', 'CategoryHomePartials::index/$1', ['as' => 'categoryPartials']);
 $routes->get('/category/(:any)', 'Category::index/$1', ['as' => 'category']);
 
 //Upload de arquivos

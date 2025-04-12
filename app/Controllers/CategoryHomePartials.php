@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\Post;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class CategoryPartials extends BaseController
+class CategoryHomePartials extends BaseController
 {
     private array $categories = [
         'culture'=> 1,

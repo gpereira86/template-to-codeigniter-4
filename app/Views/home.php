@@ -1,15 +1,10 @@
 <?= $this->extend('master') ?>
 
-<?= $this->section('css') ?>
-
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/fragment.css') ?>">
-
-<?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 19 do Criando um site com codeigniter 4:
-            <a href="https://www.youtube.com/watch?v=HO6-iU_V2Ds&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=18">Link</a>
+<!--    <h1>Estamos na aula 20 do Criando um site com codeigniter 4:
+            <a href="https://www.youtube.com/watch?v=xzaei6MTiAw&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=19">Link</a>
         </h1>-->
 <!--</div>-->
 
@@ -71,10 +66,6 @@
 <?= $this->endSection() ?>
 <?= $this->section('js') ?>
 
-    <script type="module">
-        import 'https://unpkg.com/@github/include-fragment-element'; // include-fragment-element SEM webpack
-        import './assets/js/loadHomeData.js';
-        // import './assets/js/build/fragment.js'; // include-fragment-element COM webpack
-    </script>
+    <script type="module" src="./assets/js/loadHomeData.js"></script>
 
 <?= $this->endSection() ?>

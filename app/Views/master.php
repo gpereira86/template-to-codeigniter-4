@@ -26,6 +26,7 @@
     <!-- Template Main CSS Files -->
     <link href="<?php echo base_url('assets/css/variables.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/main.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/fragment.css') ?>">
 
     <?= $this->renderSection('css') ?>
 

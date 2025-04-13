@@ -22,6 +22,7 @@ $routes->get('/trendings', 'Trending::index', ['as' => 'trending']);
 $routes->get('/recent', 'Recent::index', ['as' => 'recent']);
 $routes->get('/category/partials/(:alpha)', 'CategoryHomePartials::index/$1', ['as' => 'categoryPartials']);
 $routes->get('/category/(:any)', 'Category::index/$1', ['as' => 'category']);
+$routes->get('/post/(:any)', 'Post::index/$1', ['as' => 'post']);
 
 //Upload de arquivos
 //$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

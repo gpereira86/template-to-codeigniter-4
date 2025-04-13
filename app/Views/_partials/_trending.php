@@ -4,7 +4,7 @@
     <?php foreach ($posts as $index => $post) : ?>
 
     <li>
-        <a href="single-post.html">
+        <a href="/post/<?php echo $post->slug; ?>">
             <span class="number"><?php echo ++$index; ?></span>
             <h3><?php echo $post->title; ?></h3>
             <span class="author">

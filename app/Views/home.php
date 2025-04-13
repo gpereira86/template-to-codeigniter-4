@@ -3,9 +3,15 @@
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 20 do Criando um site com codeigniter 4:
-            <a href="https://www.youtube.com/watch?v=xzaei6MTiAw&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=19">Link</a>
+<!--    <h1>Estamos na aula 21 do Criando um site com codeigniter 4:
+            <a href="https://www.youtube.com/watch?v=cWU_1OQpxEs&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=20">Link</a>
         </h1>-->
+
+<!--    <h3> Na aula 21 foi necessário pausar e começar a estudar TinyMCE:
+            <a href="https://www.youtube.com/watch?v=dAXIita7jx8">Link</a>
+        </h3>-->
+
+
 <!--</div>-->
 
 <!-- ======= Hero Slider Section ======= -->

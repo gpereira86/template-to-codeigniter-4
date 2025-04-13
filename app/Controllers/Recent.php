@@ -14,7 +14,9 @@ class Recent extends BaseController
 
         $post = new Post();
         $recent = $post->select(
-            'posts.id,posts.title,
+            'posts.id,
+            posts.title,
+            posts.slug,
             posts.image,
             posts.created_at,
             posts.description,
@@ -34,3 +36,4 @@ class Recent extends BaseController
         ]);
     }
 }
+

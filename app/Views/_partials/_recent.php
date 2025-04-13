@@ -6,7 +6,7 @@
             <?php $post = $recent[0]; ?>
 
             <div class="post-entry-1 lg">
-                <a href="single-post.html">
+                <a href="/post/<?php echo $post->slug; ?>">
                     <img src="<?php echo $post->image; ?>" alt="" class="img-fluid">
                 </a>
                 <div class="post-meta">
@@ -20,7 +20,7 @@
                     </span>
                 </div>
 
-                <h2><a href="single-post.html"><?php echo $post->title; ?></a></h2>
+                <h2><a href="/post/<?php echo $post->slug; ?>"><?php echo $post->title; ?></a></h2>
                 <p class="mb-4 d-block">
                     <?php echo word_limiter($post->description,20); ?>
                 </p>
@@ -46,7 +46,7 @@
                     <?php foreach ($posts as $post) : ?>
 
                         <div class="post-entry-1">
-                            <a href="single-post.html">
+                            <a href="/post/<?php echo $post->slug; ?>">
                                 <img src="<?php echo $post->image; ?>" alt="" class="img-fluid">
                             </a>
                             <div class="post-meta">
@@ -59,7 +59,7 @@
                                     echo $time->toLocalizedString("MMM d, yy"); ?>
                                 </span>
                             </div>
-                            <h2><a href="single-post.html"><?php echo $post->title; ?></a></h2>
+                            <h2><a href="/post/<?php echo $post->slug; ?>"><?php echo $post->title; ?></a></h2>
                         </div>
 
                     <?php endforeach; ?>
@@ -71,7 +71,7 @@
                     <?php foreach ($posts as $post) : ?>
 
                         <div class="post-entry-1">
-                            <a href="single-post.html">
+                            <a href="/post/<?php echo $post->slug; ?>">
                                 <img src="<?php echo $post->image; ?>" alt="" class="img-fluid">
                             </a>
                             <div class="post-meta">
@@ -84,7 +84,7 @@
                                     echo $time->toLocalizedString("MMM d, yy"); ?>
                                 </span>
                             </div>
-                            <h2><a href="single-post.html"><?php echo $post->title; ?></a></h2>
+                            <h2><a href="/post/<?php echo $post->slug; ?>"><?php echo $post->title; ?></a></h2>
                         </div>
 
                     <?php endforeach; ?>

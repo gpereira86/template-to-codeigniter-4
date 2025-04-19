@@ -10,7 +10,7 @@ class Comment extends Seeder
     public function run()
     {
         $faker = Factory::create('pt_BR');
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 300; $i++) {
             $data = [
                 'user_id' => $faker->numberBetween(1, 99),
                 'post_id' => $faker->numberBetween(1, 100),

@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use stdClass;
 
 class Comment extends Model
 {
     protected $table            = 'comments';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [];
@@ -43,4 +44,49 @@ class Comment extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function comments(int $postId)
+    {
+        $comments = $this->select('
+            comments.id,
+            comments.comment,
+            users.firstName as userFirstName,
+            users.lastName as userLastName,
+            users.image as avatar,
+            comments.created_at,
+        ')->join(
+            'users',
+            'comments.user_id = users.id'
+        )->where(
+            'post_id',
+            $postId
+        )->findAll();
+
+        if (!$comments) {
+            return [];
+        }
+
+        $commentsIds = [];
+        foreach ($comments as $comment) {
+            $commentsIds[] = $comment->id;
+        }
+
+        $replies = (new Reply())->replies($commentsIds);
+
+        $commentsData = new stdClass();
+        foreach ($comments as $index => $comment) {
+            $commentsData->comments[] = $comment;
+
+            foreach ($replies as $reply) {
+
+                if ($comment->id == $reply->comment_id) {
+                    $commentsData->comments[$index]->replies[] = $reply;
+                }
+            }
+
+        }
+
+        return $commentsData;
+
+    }
 }

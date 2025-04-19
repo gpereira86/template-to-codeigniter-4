@@ -18,7 +18,7 @@ class Post extends Seeder
                 'user_id' => $faker->numberBetween(1, 99),
                 'category_id' => $faker->numberBetween(1, 10),
                 'title' => $title,
-                'slug' => strtolower(str_replace(' ', '-', $title)),
+                'slug' => strtolower(str_replace(' ', '-', remover_acentos($title))),
                 'visits' => $faker->numberBetween(1, 100),
                 'image' => $faker->imageUrl(),
                 'description' => $faker->paragraph(5),

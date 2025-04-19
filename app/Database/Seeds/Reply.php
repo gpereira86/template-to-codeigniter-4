@@ -10,7 +10,7 @@ class Reply extends Seeder
     public function run()
     {
         $faker = Factory::create('pt_BR');
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             $data = [
                 'user_id' => $faker->numberBetween(1, 99),
                 'comment_id' => $faker->numberBetween(1, 100),

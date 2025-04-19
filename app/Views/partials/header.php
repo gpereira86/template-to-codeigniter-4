@@ -15,6 +15,18 @@
                     <?php echo view_cell("App\Cells\CategoryMenu::render",['view' => 'category_menu']); ?>
                 </li>
                 <li><a href="/contact">Contact</a></li>
+
+                <?php if (session()->has('auth')) :?>
+
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">Bem vindo(a), <?php echo session()->get('user')->fullName; ?></a></li>
+                    <li><a href="/logout">Logout</a></li>
+
+                <?php else: ?>
+
+                    <li><a href="/login">Login</a></li>
+
+                <?php endif; ?>
             </ul>
         </nav><!-- .navbar -->
 

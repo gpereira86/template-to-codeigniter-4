@@ -11,5 +11,7 @@ class SeederClass extends Seeder
         $this->call('User');
         $this->call('Category');
         $this->call('Post');
+        $this->call('Comment');
+        $this->call('Reply');
     }
 }

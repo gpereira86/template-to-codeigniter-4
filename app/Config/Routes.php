@@ -27,5 +27,7 @@ $routes->get('/login', 'Login::index', ['as' => 'login']);
 $routes->post('/login', 'Login::store', ['as' => 'login.store']);
 $routes->get('/logout', 'Login::destroy');
 
+$routes->post('/api/reply', 'Reply::store', ['as' => 'reply.store']);
+
 //Upload de arquivos
 //$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

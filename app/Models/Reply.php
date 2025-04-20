@@ -12,7 +12,7 @@ class Reply extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id', 'user_id', 'comment_id', 'comment'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

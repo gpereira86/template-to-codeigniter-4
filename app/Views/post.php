@@ -131,47 +131,10 @@
     </div>
 </section>
 
-<!-- Modal Comment -->
-<div id="modal-comment" class="modal fade" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <textarea rows="10" class="w-100" name="message"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btn-send-reply">Send Reply</button>
-            </div>
-        </div>
-    </div>
-</div><!-- End Modal Comment -->
+<?php echo $this->include('/partials/modals/replies.php') ?>
 
 <?= $this->section('js') ?>
-<script>
-    const btnReplies = document.querySelectorAll('.btn-reply');
-    const btnSendReply = document.querySelector('#btn-send-reply');
-    const modal = new bootstrap.Modal(document.getElementById('modal-comment'));
-    const modalTitle = document.querySelector('.modal-title');
-
-    btnReplies.forEach(btn =>{
-        btn.addEventListener('click', function() {
-
-            modalTitle.textContent = this.textContent
-
-            btnSendReply.setAttribute('data-id', this.getAttribute('data-id'));
-            modal.show();
-        })
-    });
-
-    btnSendReply.addEventListener('click', function() {
-        console.log('Send reply')
-    })
-
-</script>
+<script src="/assets/js/replies.js"></script>
 <?= $this->endSection() ?>
 
 <?= $this->endSection() ?>

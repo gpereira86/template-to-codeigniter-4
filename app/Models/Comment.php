@@ -52,6 +52,7 @@ class Comment extends Model
             comments.comment,
             users.firstName as userFirstName,
             users.lastName as userLastName,
+            users.id as userId,
             users.image as avatar,
             comments.created_at,
         ')->join(
@@ -75,17 +76,24 @@ class Comment extends Model
 
         $commentsData = new stdClass();
         foreach ($comments as $index => $comment) {
-            $commentsData->comments[] = $comment;
 
-            foreach ($replies as $reply) {
+            $commentsData->comments[] = $comment;
+            $commentsData->comments[$index]->isAuthor = !session()->has('auth') ? false : (session()->get('user')->id == $comment->userId ? true : false);
+
+            foreach ($replies as $indexReply => $reply) {
 
                 if ($comment->id == $reply->comment_id) {
-                    $commentsData->comments[$index]->replies[] = $reply;
+                    $commentsData->comments[$index]->replies[$indexReply] = $reply;
+                    $commentsData->comments[$index]->replies[$indexReply]->isAuthor = !session()->has('auth') ? false : (session()->get('user')->id == $reply->userId ? true : false);
                 }
             }
 
         }
-
+        
+//        echo "<pre>";
+//        var_dump($commentsData);
+//        echo "</pre>";
+//        die();
         return $commentsData;
 
     }

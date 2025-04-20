@@ -39,10 +39,13 @@
                                     <div class="comment-meta d-flex align-items-baseline">
                                         <h6 class="me-2"><?php echo $comment->userFirstName. ' '.$comment->userLastName; ?></h6>
                                         <span class="text-muted">
-                                            <?php
-                                                $time = \CodeIgniter\I18n\Time::parse($comment->created_at, 'America/Chicago');
-                                                echo $time->humanize();
-                                            ?>
+                                            <?php echo \CodeIgniter\I18n\Time::parse($comment->created_at, 'America/Chicago')->humanize();?>
+
+                                            <?php if ($comment->isAuthor): ?>
+                                                <span class="badge bg-dark">my comment <i class="bi bi-star-fill"></i></span>
+                                            <?php elseif (session()->has('auth')): ?>
+                                                <button type="button" class="btn btn-outline-primary btn-sm">Reply</button>
+                                            <?php endif; ?>
                                         </span>
                                     </div>
                                     <div class="comment-body">
@@ -63,10 +66,12 @@
                                                         <div class="reply-meta d-flex align-items-baseline">
                                                             <h6 class="mb-0 me-2"><?php echo $reply->userFirstName. ' '.$reply->userLastName; ?></h6>
                                                             <span class="text-muted">
-                                                                <?php
-                                                                $time = \CodeIgniter\I18n\Time::parse($reply->created_at, 'America/Chicago');
-                                                                echo $time->humanize();
-                                                                ?>
+                                                                <?php echo \CodeIgniter\I18n\Time::parse($reply->created_at, 'America/Chicago')->humanize(); ?>
+                                                                <?php if ($reply->isAuthor): ?>
+                                                                    <span class="badge bg-dark">my reply <i class="bi bi-star-fill"></i></span>
+                                                                <?php elseif (session()->has('auth')): ?>
+                                                                    <button type="button" class="btn btn-outline-primary btn-sm">Reply</button>
+                                                                <?php endif; ?>
                                                             </span>
                                                         </div>
                                                         <div class="reply-body">

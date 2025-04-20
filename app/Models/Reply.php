@@ -52,6 +52,7 @@ class Reply extends Model
             replies.comment,
             users.firstName as userFirstName,
             users.lastName as userLastName,
+            users.id as userId,
             users.image as avatar,
             replies.created_at,
         ')->join(

@@ -3,8 +3,8 @@
 
 <?= $this->section('content') ?>
 <!--<div class="container-md pt-3 text-danger">-->
-<!--    <h1>Estamos na aula 30 do Criando um site com codeigniter 4:
-            <a href="https://www.youtube.com/watch?v=3PGRbPMnpYs&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=30">Link</a>
+<!--    <h1>Estamos na aula 33 do Criando um site com codeigniter 4:
+            <a href="https://www.youtube.com/watch?v=QaBzdVHjjeI&list=PLyugqHiq-SKfh0oqqz69rkgHShrsXyoDl&index=33">Link</a>
         </h1>-->
 
 <!--    <h3> Na aula 21 foi necessário pausar e começar a estudar TinyMCE:

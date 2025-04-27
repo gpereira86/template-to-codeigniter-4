@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\User;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Libraries\Login as LoginLib;
 
 class Login extends BaseController
 {
@@ -42,15 +43,7 @@ class Login extends BaseController
             return redirect()->route('login')->with('error', 'Email ou senha inválidos');
         }
 
-        $userInfo = new \stdClass();
-        $userInfo->id = $user->id;
-        $userInfo->firstName = $user->firstName;
-        $userInfo->lastName = $user->lastName;
-        $userInfo->email = $user->email;
-        $userInfo->fullName = $user->firstName. ' ' . $user->lastName;
-
-        session()->set(['auth' => true]);
-        session()->set(['user' => $userInfo]);
+        LoginLib::login($user);
 
         return redirect()->route('home');
 

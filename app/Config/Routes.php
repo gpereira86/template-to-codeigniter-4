@@ -30,5 +30,8 @@ $routes->get('/logout', 'Login::destroy');
 $routes->post('/api/reply', 'Reply::store', ['as' => 'reply.store']);
 $routes->post('/comment', 'Comment::store', ['as' => 'comment.store', 'filter' => 'csrfthrottle']);
 
+$routes->get('/register', 'Register::index', ['as' => 'register']);
+$routes->post('/register', 'Register::store', ['as' => 'register.store']);
+
 //Upload de arquivos
 //$routes->post('/upload', 'Upload::store', ['as' => 'upload']);

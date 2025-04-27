@@ -27,7 +27,7 @@
                                     <div data-mdb-input-init class="form-outline mb-4">
                                         <?php echo session()->get('errors')['email'] ?? '' ?>
                                         <input type="email" name="email" id="form2Example11" class="form-control"
-                                               placeholder="Phone number or email address" value="maximiano03@vasques.net" />
+                                               placeholder="Phone number or email address" value="corona.aaron@rico.br" />
                                         <label class="form-label" for="form2Example11">Email</label>
                                     </div>
 

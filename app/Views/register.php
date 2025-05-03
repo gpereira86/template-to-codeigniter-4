@@ -11,30 +11,34 @@
 
                     <div class="col-lg-4">
                         <div data-mdb-input-init class="form-outline">
+                            <span class="text text-bg-danger" style="font-size: 20px;"><?php echo session()->get('errors')['firstName'] ?? ''; ?></span>
                             <input type="text" id="form3Example1" name="firstName" class="form-control"
-                                   placeholder="Your first name"/>
+                                   placeholder="Your first name" value="Primeiro"/>
                             <label class="form-label" for="form3Example1">First name</label>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div data-mdb-input-init class="form-outline">
+                            <span class="text text-bg-danger" style="font-size: 20px;"><?php echo session()->get('errors')['lastName'] ?? ''; ?></span>
                             <input type="text" id="form3Example2" name="lastName" class="form-control"
-                                   placeholder="Your last name"/>
+                                   placeholder="Your last name" value="Ultimo"/>
                             <label class="form-label" for="form3Example2">Last name</label>
                         </div>
                     </div>
 
                     <!-- Email input -->
                     <div data-mdb-input-init class="col-lg-8 form-outline my-4">
+                        <span class="text text-bg-danger" style="font-size: 20px;"><?php echo session()->get('errors')['email'] ?? ''; ?></span>
                         <input type="email" id="form3Example3" name="email" class="form-control"
-                               placeholder="Your email"/>
+                               placeholder="Your email" value="vila.nadia@reis.net.br"/>
                         <label class="form-label" for="form3Example3">Email address</label>
                     </div>
 
                     <!-- Password input -->
                     <div data-mdb-input-init class="col-lg-8 form-outline mb-4">
-                        <input type="password" id="form3Example4" name="password" class="form-control" placeholder="Your first password"/>
+                        <span class="text text-bg-danger" style="font-size: 20px;"><?php echo session()->get('errors')['password'] ?? ''; ?></span>
+                        <input type="password" id="form3Example4" name="password" class="form-control" placeholder="Your first password" value="123"/>
                         <label class="form-label" for="form3Example4">Password</label>
                     </div>
 
